@@ -1,0 +1,17 @@
+from moviepy.editor import *
+
+# o arquivo no formato mp4 tem que estar na mesma pasta desta linha de código.
+
+mp4_file = "Nio Garcia x J Balvin x Bad Bunny  - AM Remix.mp4" # inserir nome do vídeo colocando .mp4 no final
+
+mp3_file = "Nio Garcia x J Balvin x Bad Bunny  - AM Remix.mp3" # inserir nome da música colocando .mp3 no final
+
+videoClip = VideoFileClip(mp4_file)
+
+audioclip = videoClip.audio
+
+audioclip.write_audiofile(mp3_file)
+
+audioclip.close()
+
+videoClip.close()
